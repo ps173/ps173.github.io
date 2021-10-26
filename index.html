@@ -2,38 +2,85 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ps173 : ps's personal site</title>
-    <style>
-      * {
-        font-family: "Courier New", Courier, monospace;
-      }
-      body,
-      html {
-        background-color: black;
-        color: chartreuse;
-      }
-      h1 {
-        color: hotpink;
-      }
-      a {
-        color: blueviolet;
-        transition: 0.3s;
-      }
-      a:hover {
-        color: aqua;
-        transition: 0.3s;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <title>Personal Site</title>
   </head>
   <body>
-    <h1>🚧 WORK IN PROGRESS</h1>
-    <hr />
-    <br />
-    <p>
-      Hello! right now this page is under progress. Go
-      <a href="http://ps173.github.io/portfolio-site/">here</a> for now :)
-    </p>
+    <logo-header>
+      <span slot="header"> Pratham Sharma</span>
+      <span slot="subtitle">A fullstack webdeveloper</span>
+    </logo-header>
+    <about-section id="About"></about-section>
+    <project-section id="Projects">
+      <div class="projects-display" slot="project-list">
+        <ul>
+          <li>
+            Vimgore : <a href="https://vimgore.netlify.app/about">live</a> /
+            <a href="https://github.com/ps173/vimgore">Code</a>
+          </li>
+          <span>
+            This is a interactive game to learn vim using snippets. This app was
+            built using MERN stack. I learned lot of things while making this
+            like making deploying a site, hosting backend api, and general stuff
+            about rest apis.
+          </span>
+
+          <li>
+            mkd-editor : <a href="https://ps173.github.io/mkd-editor">live</a> /
+            <a href="https://github.com/ps173/mkd-editor">code</a>
+          </li>
+          <span>
+            A Markdown editor in your browser. I made this as a self imposed
+            challenge. The challenge was to complete app in a single day. I did
+            complete the challenge. This app was built using typescript and
+            nextjs. I also used github actions to host this live on gh pages.
+          </span>
+
+          <li>
+            tnews bot : <a href="https://github.com/ps173/tnews-bot">code</a>
+          </li>
+          <span>
+            A telegram bot that displays and let's you search through news. Made
+            using python and news api.
+          </span>
+
+          <li>
+            dodowarrio : <a href="https://github.com/ps173/dodowarrio">code</a>
+          </li>
+          <span> A command line todo list made in go. </span>
+
+          <li>
+            Asteroids Clone :
+            <a href="https://github.com/ps173/asteroids">code</a>
+          </li>
+          <span> A asteroids clone made using lua and love2d framework. </span>
+
+          <li>
+            DDOS-D : <a href="https://github.com/ps173/asteroids">code</a>
+          </li>
+          <span>
+            A game about logic gates made using lua and love2d framework.
+          </span>
+        </ul>
+      </div>
+    </project-section>
+
+    <contact-section id="Contact">
+      <div class="contact-info" slot="contact-info">
+        <ul>
+          <li><a href="mailto:prathamsharma173@gmail.com">mail</a></li>
+          <li><a href="http://github.com/ps173">github</a></li>
+          <li><a href="http://t.me/Spirit_ps17">telegram</a></li>
+          <li><a href="http://instagram.com/unparalleled173">instagram</a></li>
+          <li><a href="http://twitter.com/mehmehsloth">twitter</a></li>
+        </ul>
+      </div>
+    </contact-section>
+    <!-- Components -->
+    <script src="./components/Header.js"></script>
+    <script src="./components/About.js"></script>
+    <script src="./components/Project.js"></script>
+    <script src="./components/Contact.js"></script>
   </body>
 </html>
