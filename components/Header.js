@@ -49,9 +49,24 @@ header.innerHTML = `
   .link-container a {
     text-decoration : none;
     color : var(--pink);
-    font-size : 1.1rem;
+    font-size : 1rem;
     padding : 1%;
   }
+
+@media only screen and (max-width: 900px) {
+  .link-container {
+    flex-direction : column;
+  }
+
+  .link-container a {
+    padding-top : 3%;
+    text-decoration : none;
+    color : var(--pink);
+    font-size : 0.8rem;
+    padding-top : 2%;
+  }
+}
+
 </style>
 
 <div class='container'>

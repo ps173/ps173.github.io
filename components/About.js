@@ -9,16 +9,17 @@ about.innerHTML = `
 
 .background {
 	width : 100%;
-	background : transparent;
+	background : var(--alt-transparency);
 	height : 100%;
 	display : flex;
+	flex-direction : column;
 	align-items : center;
 	justify-content : center;
 }
 
 .container {
 	max-width: 50% ; 
-	min-width: 500px ; 
+	min-width: 300px ; 
 	height: 70%;
 	overflow : auto;
 }
@@ -26,7 +27,9 @@ about.innerHTML = `
 .heading {
   font-family: "Noto Serif Display", serif;
 	text-align : center;
+	font-weight : lighter;
 	color : var(--pink);
+	padding-bottom : 5%;
 }
 
 .container p {
@@ -51,11 +54,21 @@ about.innerHTML = `
   text-align: center;
   width : 100%;
 }
+
+@media only screen and (max-width: 900px) {
+   .container p {
+      font-size : 1rem;
+   }
+   .container .links{
+      padding-top : 5%;
+      padding-bottom : 5%;
+   }
+}
 </style>
 
 <div class='background'>
-	<div class='container'>
     <h1 class='heading'>About Me</h1>
+	<div class='container'>
     <p>
 		 I really like to play with computers. You may find me
      making some game or maybe some cli or playing with some really old
@@ -74,7 +87,7 @@ about.innerHTML = `
 		 And I am still learning... :)
     </p>
     <div class="links">
-		  <a href="#Main">Go Back</a> / <a href="#Projects">Next</a>
+		  <a href="#Main">Home</a> / <a href="#Projects">Next</a>
     </div>
 	</div>
 </div>

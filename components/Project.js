@@ -12,13 +12,14 @@ projects.innerHTML = `
 	height : 100%;
 	background : var(--transparency);
 	display : flex;
+  flex-direction : column;
 	align-items : center;
 	justify-content : center;
 }
 
 .container {
 	max-width: 50% ; 
-	min-width: 500px ; 
+	min-width: 300px; 
 	height: 90%;
   overflow : auto;
 }
@@ -33,6 +34,7 @@ projects.innerHTML = `
   font-family: "Noto Serif Display", serif;
   font-weight : lighter;
   padding-bottom : 2%;
+  padding-top : 2%;
 }
 
 .container .links a {
@@ -46,11 +48,25 @@ projects.innerHTML = `
   text-align: center;
   width : 100%;
 }
+
+@media only screen and (max-width: 900px) {
+   .container p {
+      font-size : 0.8rem;
+   }
+   .heading {
+      padding-bottom : 5%;
+      padding-top : 5%;
+   }
+   .container .links{
+      padding-top : 5%;
+      padding-bottom : 5%;
+   }
+}
 </style>
 
 <div class='background'>
-  <div class='container'>
     <h1 class="heading">Projects</h1>
+  <div class='container'>
       <p>
         I generally work with web technologies which include working 
         with typescript, golang, scss(css) and frameworks like react or svelte.
@@ -60,7 +76,7 @@ projects.innerHTML = `
         <slot name="project-list"/>
       </p>
       <div class="links">
-		    <a href="#Main">Go Back</a> / <a href="#Contact">Next</a>
+		    <a href="#Main">Home</a> / <a href="#Contact">Next</a>
       </div>
   </div>
 </div>
