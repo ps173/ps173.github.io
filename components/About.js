@@ -35,21 +35,23 @@ about.innerHTML = `
 	white-space: pre-line;
 }
 
-.link-container {
-	position : absolute;
-	bottom : 30%;
-	display : flex;
-	flex-direction : column;
-	align-items: center;
-	justify-content: center;
+.container p a {
+	font-size : 1.3rem;		
+	text-decoration : none;
+	color : var(--pink)
 }
 
- .link-container a {
-    text-decoration : none;
-    color : var(--pink);
-    font-size : 1.1rem;
-    padding-top : 5%;
-  }
+.container .links a {
+	font-size : 1.3rem;		
+	text-decoration : none;
+	color : var(--pink)
+}
+
+.container .links{
+  padding-top : 3%;
+  text-align: center;
+  width : 100%;
+}
 </style>
 
 <div class='background'>
@@ -68,6 +70,9 @@ about.innerHTML = `
 
 		 And I am still learning... :)
     </p>
+    <div class="links">
+		  <a href="#Main">Go Back</a> / <a href="#Projects">Next</a>
+    </div>
 	</div>
 </div>
 `;

@@ -19,7 +19,7 @@ projects.innerHTML = `
 .container {
 	max-width: 50% ; 
 	min-width: 500px ; 
-	height: 80%;
+	height: 90%;
   overflow : auto;
 }
 
@@ -34,6 +34,18 @@ projects.innerHTML = `
   font-weight : lighter;
   padding-bottom : 2%;
 }
+
+.container .links a {
+	font-size : 1.3rem;		
+	text-decoration : none;
+	color : var(--pink)
+}
+
+.container .links{
+  padding-top : 3%;
+  text-align: center;
+  width : 100%;
+}
 </style>
 
 <div class='background'>
@@ -47,6 +59,9 @@ projects.innerHTML = `
         Some projects that I have worked on are : 
         <slot name="project-list"/>
       </p>
+      <div class="links">
+		    <a href="#Main">Go Back</a> / <a href="#Contact">Next</a>
+      </div>
   </div>
 </div>
 `;

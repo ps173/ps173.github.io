@@ -33,6 +33,18 @@ contact.innerHTML = `
 .container p {
   font-size : 1.2rem;
 }
+
+.container .links a {
+	font-size : 1.3rem;		
+	text-decoration : none;
+	color : var(--pink)
+}
+
+.container .links{
+  padding-top : 3%;
+  text-align: center;
+  width : 100%;
+}
 </style>
 
 <div class='background'>
@@ -42,6 +54,9 @@ contact.innerHTML = `
        You can Connect with me :
 				<slot name="contact-info"/>  
       </p>
+      <div class="links">
+		    <a href="#Main">Home</a>
+      </div>
   </div>
 </div>
 `;
