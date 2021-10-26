@@ -10,7 +10,6 @@ contact.innerHTML = `
 .background {
 	width : 100%;
 	height : 100%;
-	background : var(--alt-background);
 	display : flex;
 	align-items : center;
 	justify-content : center;

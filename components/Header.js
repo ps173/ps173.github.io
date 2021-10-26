@@ -8,8 +8,8 @@ header.innerHTML = `
   }
 
   .container {
-    background : var(--background);
     width : 100%;
+    background : var(--transparency);
     height : 100%;
     display : flex; 
     flex-direction : column;
@@ -58,10 +58,10 @@ header.innerHTML = `
   <h1><slot name="header"/></h1>
   <h5><slot name="subtitle"/></h5>
   <div class='link-container'>
-    <a href="https://ps173.github.io/personal-website"> Creative Portfolio </a> 
     <a href="#About"> About Me</a> 
     <a href="#Projects"> Projects</a> 
     <a href="#Contact"> Contact Me</a>
+    <a href="https://ps173.github.io/personal-website"> Creative Portfolio </a> 
   </div>
 </div>
 `;

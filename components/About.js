@@ -9,8 +9,8 @@ about.innerHTML = `
 
 .background {
 	width : 100%;
+	background : transparent;
 	height : 100%;
-	background : var(--alt-background);
 	display : flex;
 	align-items : center;
 	justify-content : center;
@@ -32,7 +32,6 @@ about.innerHTML = `
 .container p {
 	font-size : 1.2rem;		
 	padding-top : 10%;
-	white-space: pre-line;
 }
 
 .container p a {
@@ -62,12 +61,16 @@ about.innerHTML = `
      making some game or maybe some cli or playing with some really old
      software from 90's. I really like reading books and interacting
      with people (sometimes). 
-
+		 <br/>
+		 <br/>
+		 <br/>
 		 I started when I was 14 and back then I didn't do any cool stuff.
 		 I remember vaguely trying to make games in lua. But I was unable to 
 		 figure out lot of stuff. Then I discovered python and the world of
 		 web-dev.  
-
+		 <br/>
+		 <br/>
+		 <br/>
 		 And I am still learning... :)
     </p>
     <div class="links">

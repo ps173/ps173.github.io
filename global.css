@@ -9,6 +9,7 @@
 :root {
   --background: #212121;
   --alt-background: #343434;
+  --transparency: #00000050;
   --green: #6d9886;
   --pink: #bd67c0;
   --cream: #d9cab3;
@@ -17,7 +18,6 @@
 
 body,
 html {
-  background-color: var(--background);
   color: var(--white);
   font-family: "Fira Sans", sans-serif;
   width: 100vw;
@@ -67,4 +67,16 @@ a {
   text-decoration: none;
   color: var(--green);
 }
-/* TODO: Implement smooth scrolling */
+
+.background-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
