@@ -103,4 +103,14 @@ a {
   .background-image .de {
     display: none;
   }
+
+  .projects-display ul span {
+    font-size: 1rem;
+  }
+
+  .projects-display ul li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--pink);
+  }
 }

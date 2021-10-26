@@ -51,7 +51,7 @@ projects.innerHTML = `
 
 @media only screen and (max-width: 900px) {
    .container p {
-      font-size : 0.8rem;
+      font-size : 1rem;
    }
    .heading {
       padding-bottom : 5%;
