@@ -77,6 +77,7 @@ header.innerHTML = `
     <a href="#Projects"> Projects</a> 
     <a href="#Contact"> Contact Me</a>
     <a href="https://ps173.github.io/personal-website"> Creative Portfolio </a> 
+    <a href="./assets/resume.pdf"> CV </a> 
   </div>
 </div>
 `;
