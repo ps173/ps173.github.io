@@ -99,10 +99,6 @@ class About extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(about.content.cloneNode(true));
   }
-
-  connectedCallback() {
-    // TODO: Simple animation
-  }
 }
 
 window.customElements.define("about-section", About);

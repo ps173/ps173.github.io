@@ -80,10 +80,6 @@ class Contact extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(contact.content.cloneNode(true));
   }
-
-  connectedCallback() {
-    // TODO: Simple animation
-  }
 }
 
 window.customElements.define("contact-section", Contact);

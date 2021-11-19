@@ -88,10 +88,6 @@ class Projects extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(projects.content.cloneNode(true));
   }
-
-  connectedCallback() {
-    // TODO: Simple animation
-  }
 }
 
 window.customElements.define("project-section", Projects);

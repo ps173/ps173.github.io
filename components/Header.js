@@ -11,7 +11,12 @@ header.innerHTML = `
     width : 100%;
     background : var(--transparency);
     height : 100%;
+  }
+
+  .content {
     display : flex; 
+    width : 100%;
+    height : 100%;
     flex-direction : column;
     justify-content : center;
     align-items : center;
@@ -25,6 +30,13 @@ header.innerHTML = `
     font-size : 2.4rem;
     display : block;
     width : 100%;
+    transition: 0.3s;
+    transform : translateY(-10) 
+  }
+
+  .fade-in{
+   transition: 0.3s;
+   transform : translateY(0) 
   }
 
   h5 {
@@ -70,7 +82,8 @@ header.innerHTML = `
 </style>
 
 <div class='container'>
-  <h1><slot name="header"/></h1>
+ <div class='content'>
+  <h1 id='name'><slot name="header"/></h1>
   <h5><slot name="subtitle"/></h5>
   <div class='link-container'>
     <a href="#About"> About Me</a> 
@@ -79,6 +92,7 @@ header.innerHTML = `
     <a href="https://ps173.github.io/personal-website"> Creative Portfolio </a> 
     <a href="./assets/resume.pdf"> CV </a> 
   </div>
+ </div>
 </div>
 `;
 
@@ -87,10 +101,20 @@ class Header extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(header.content.cloneNode(true));
+    this.container = this.shadowRoot.querySelector(".content");
   }
 
   connectedCallback() {
-    // TODO: Simple animation
+    const containerAnimation = [
+      { transform: "translateY(-30%)", opacity: 0 },
+      { transform: "translateY(-15%)", opacity: 0.5 },
+      { transform: "translateY(0)", opacity: 1 },
+    ];
+    this.container.animate(containerAnimation, {
+      duration: 700,
+      iterations: 1,
+      easing: "ease-in-out",
+    });
   }
 }
 
