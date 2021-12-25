@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="global.css" />
     <meta name="description" content="Pratham's Personal Website" />
     <title>Personal Site</title>
+    <!-- OG Tags -->
+    <meta property="og:title" content="Pratham's Website" />
+    <meta property="og:description" content="Pratham's Personal Website" />
   </head>
   <body>
     <div class="background-image">
@@ -100,6 +103,16 @@
       </div>
     </contact-section>
 
+    <!-- Important Meta Image Load -->
+    <script>
+      const API_URL = "https://api.thecatapi.com/v1/images/search";
+      const updateMeta = async () => {
+        const data = await fetch(API_URL).then((res) => res.json());
+        const URL = data[0].url;
+        document.head.innerHTML += `<meta property="og:image" content="${URL}"/>`;
+      };
+      document.addEventListener("DOMContentLoaded", updateMeta());
+    </script>
     <!-- Components -->
     <script src="./components/Header.js"></script>
     <script src="./components/About.js"></script>
