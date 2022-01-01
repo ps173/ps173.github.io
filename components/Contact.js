@@ -10,18 +10,19 @@ contact.innerHTML = `
 .background {
 	width : 100%;
 	height : 100%;
-  background : var(--alt-transparency);
+ background : var(--alt-transparency);
 	display : flex;
-  flex-direction : column;
+ flex-direction : column;
 	align-items : center;
 	justify-content : center;
+ scroll-snap-align: start;
 }
 
 .container {
 	max-width: 50% ; 
 	min-width: 300px; 
 	height: 80%;
-  overflow : auto;
+ overflow : auto;
 }
 
 .heading {

@@ -12,9 +12,11 @@ projects.innerHTML = `
 	height : 100%;
 	background : var(--transparency);
 	display : flex;
-  flex-direction : column;
+ flex-direction : column;
 	align-items : center;
+ scroll-snap-align: start;
 	justify-content : center;
+
 }
 
 .container {

@@ -17,14 +17,27 @@
   --white: #f6f6f6;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: darkgrey;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 body,
 html {
   color: var(--white);
   font-family: "Fira Sans", sans-serif;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 h1,

@@ -11,6 +11,7 @@ header.innerHTML = `
     width : 100%;
     background : var(--transparency);
     height : 100%;
+    scroll-snap-align: start;
   }
 
   .content {
