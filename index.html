@@ -2,37 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mehmeh's Personal Website" />
+    <link rel="stylesheet" href="global.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Mehmehsloth</title>
+    <!-- OG Tags -->
+    <meta property="og:title" content="Mehmeh's website" />
+    <meta property="og:description" content="Pratham's Personal Website" />
+    <meta
+      property="og:image"
+      content="https://cdn2.thecatapi.com/images/MTgzOTYzNQ.jpg"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="header-title">Pratham Sharma</div>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="about">
+          <p>
+            I try to be generalist in terms of computers so I try to have my
+            hands on everything. You may find me playing with some really old
+            software 90s trying to reverse engineer it, or roughly making a
+            calculator from breadboard or just some good new hipster framework.
+          </p>
+          <p>
+            I started working very early, right after high school. Hence, I
+            think I have decent practical working experience. Currently working
+            <a href="https://codeword.tech">@codeword</a> where we make
+            marketing automation applications
+          </p>
+        </section>
+        <section class="projects">
+          <div class="section-heading">Projects</div>
+          <div class="cardList">
+            <div class="card">
+              <img
+                class="card-thumbnail"
+                src="https://picsum.photos/400/200"
+                alt="Thumbnail"
+              />
+              <h2 class="card-heading">Heading</h2>
+              <p class="card-description">Description</p>
+              <div class="card-footer">
+                <a href="#">Action 1</a>
+                <a href="#">Action 2</a>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                class="card-thumbnail"
+                src="https://picsum.photos/400/200"
+                alt="Thumbnail"
+              />
+              <h2 class="card-heading">Heading</h2>
+              <p class="card-description">Description</p>
+              <div class="card-footer">
+                <a href="#">Action 1</a>
+                <a href="#">Action 2</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="Contact">
+          <div class="section-heading">Contact Me</div>
+          <div class="contact-info" slot="contact-info">
+            <ul>
+              <li><a href="mailto:prathamsharma173@gmail.com">mail</a></li>
+              <li><a href="http://github.com/ps173">github</a></li>
+              <li><a href="http://t.me/Spirit_ps17">telegram</a></li>
+              <li>
+                <a href="http://instagram.com/unparalleled173">instagram</a>
+              </li>
+              <li><a href="http://twitter.com/mehmehsloth">twitter</a></li>
+            </ul>
+            <br />
+            I also try to write blogs on :
+            <ul>
+              <li><a href="https://dev.to/ps173">dev.to</a></li>
+              <li><a href="https://mehmehsloth.medium.com/">medium</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2024 Full Stack Web Developer</p>
+      </footer>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="global.css" />
     <meta name="description" content="Pratham's Personal Website" />
     <title>Personal Site</title>
-    <!-- OG Tags -->
     <meta property="og:title" content="Pratham's Website" />
     <meta property="og:description" content="Pratham's Personal Website" />
     <meta property="og:image"
     content="https://cdn2.thecatapi.com/images/MTgzOTYzNQ.jpg"
   </head>
   <body>
-    <div class="background-image">
-      <img
-        class="mobile"
-        src="./assets/blob-scene-haikei-mobile.svg"
-        alt="svg"
-      />
-      <img class="de" src="./assets/blob-scene-haikei.svg" alt="svg" />
-    </div>
 
-    <!--  Heading Page -->
-    <logo-header id="Main">
+    <div id="Main">
       <span slot="header"> Pratham Sharma</span>
       <span slot="subtitle">A fullstack webdeveloper</span>
-    </logo-header>
+    </div>
 
-    <!-- About Section -->
-    <about-section id="About"></about-section>
+    <div id="About"></div>
 
-    <!-- Projects Area -->
-    <project-section id="Projects">
+    <div id="Projects">
       <div class="projects-display" slot="project-list">
         <ul>
           <li>
@@ -84,10 +182,9 @@
           </span>
         </ul>
       </div>
-    </project-section>
+    </div>
 
-    <!-- Contact Info -->
-    <contact-section id="Contact">
+    <div id="Contact">
       <div class="contact-info" slot="contact-info">
         <ul>
           <li><a href="mailto:prathamsharma173@gmail.com">mail</a></li>
@@ -103,12 +200,7 @@
           <li><a href="https://mehmehsloth.medium.com/">medium</a></li>
         </ul>
       </div>
-    </contact-section>
+    </div>
 
-    <!-- Components -->
-    <script src="./components/Header.js"></script>
-    <script src="./components/About.js"></script>
-    <script src="./components/Project.js"></script>
-    <script src="./components/Contact.js"></script>
   </body>
-</html>
+</html> -->
