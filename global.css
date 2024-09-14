@@ -76,11 +76,16 @@ nav a {
     }
 }
 
-.theme-toggle {
+.emoji-button {
     all: unset;
     border: 1px solid var(--text);
     background-color: var(--background);
     padding: 2px 4px;
+}
+
+.random-button {
+    all: unset;
+    text-decoration: none;
 }
 
 a {
@@ -258,6 +263,34 @@ main {
     }
 
     .section-heading {
+        font-size: 1.25rem;
+    }
+
+    .card-heading {
+        font-size: 1rem;
+    }
+
+    .card-description {
+        font-size: 10px;
+    }
+
+    .contact-heading {
+        font-size: 1rem;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    .section-heading {
+        padding: 1rem 0;
+        font-size: 1.25rem;
+        font-family: var(--heading-font);
+    }
+
+    .header-title {
         font-size: 1.25rem;
     }
 
