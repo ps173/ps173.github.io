@@ -1,129 +1,275 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Noto+Serif+Display&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
-  --background: #212121;
-  --alt-background: #343434;
-  --transparency: #00000050;
-  --alt-transparency: #21212150;
-  --green: #6d9886;
-  --pink: #bd67c0;
-  --cream: #d9cab3;
-  --white: #f6f6f6;
+    /* source: https://colorhunt.co/palette/7695ff9dbdffffd7c4ff9874 */
+    --color-1: #7695ff;
+    --color-2: #9dbdff;
+    --color-3: #ffd7c4;
+    --color-4: #ff9874;
+    --background: white;
+    --text: black;
+    --body-font: "Space Grotesk", sans-serif;
+    --heading-font: "Montserrat", sans-serif;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: darkgrey;
-}
-
-::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-body,
 html {
-  color: var(--white);
-  font-family: "Fira Sans", sans-serif;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Noto Serif Display", serif;
+body.dark-mode {
+    --background: black;
+    --text: white;
+    --color-1: #9dbdff;
+    --color-4: #ffd7c4;
+}
+
+body {
+    font-family: var(--body-font);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.page {
+    max-width: 800px;
+    width: 80%;
+}
+
+header {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    font-family: var(--heading-font);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    padding: 0 1rem;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--color-1);
+    }
+}
+
+.theme-toggle {
+    all: unset;
+    border: 1px solid var(--text);
+    background-color: var(--background);
+    padding: 2px 4px;
 }
 
 a {
-  text-decoration: none;
-  color: var(--pink);
-  font-size: 1.1rem;
-  padding-top: 5%;
+    color: var(--color-4);
 }
 
-.projects-display .container p {
-  font-size: 1.2rem;
-  padding-top: 10%;
-  white-space: pre-line;
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    width: auto;
 }
 
-.projects-display ul {
-  padding-left: 5%;
+.section-heading {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-family: var(--heading-font);
 }
 
-.projects-display ul li {
-  padding-top: 3%;
-  text-decoration: none;
-  color: var(--green);
+.projects {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-info ul {
-  padding-left: 5%;
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
-.contact-info ul li {
-  padding-top: 3%;
-  text-decoration: none;
-  color: var(--green);
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 400px;
 }
 
-.background-image {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.background-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.background-image .mobile {
-  display: none;
-}
-
-@media only screen and (max-width: 900px) {
-  .background-image img {
+.card-thumbnail {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
-  }
+    border: 1px solid var(--text);
+}
 
-  .background-image .mobile {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+.card-heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    /* padding: 0.5rem; */
+}
 
-  .background-image .de {
-    display: none;
-  }
+.card-description {
+    /* padding: 0.5rem; */
+    font-size: 12px;
+}
 
-  .projects-display ul span {
-    font-size: 1rem;
-  }
+.card-footer {
+    /* padding: 0.5rem; */
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-  .projects-display ul li a {
-    font-size: 1rem;
+.card-footer a {
+    position: relative;
     text-decoration: none;
-    color: var(--pink);
-  }
+    color: var(--color-1);
+}
+
+.card-footer a::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: var(--text);
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-footer a:last-child::after {
+    display: none;
+}
+
+.contact-sections {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-heading {
+    font-size: 1.25rem;
+    font-family: var(--heading-font);
+}
+
+.links-list {
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
+}
+
+.menu-toggle {
+    all: unset;
+    display: none;
+    cursor: pointer;
+    font-size: 1.75rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .cardList {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-thumbnail {
+        height: 150px;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+    }
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        display: none; /* Hide the nav by default on mobile */
+    }
+
+    header {
+        /* flex-direction: column; */
+        padding: 1rem 0;
+    }
+
+    /* Add hamburger icon or menu styles */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    nav.active ul {
+        position: absolute;
+        border: 1px solid var(--text);
+        padding: 1rem 0;
+        z-index: 10;
+        background-color: var(--background);
+        top: 30px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-thumbnail {
+        height: 120px;
+    }
+
+    .header-title {
+        font-size: 1.25rem;
+    }
+
+    .section-heading {
+        font-size: 1.25rem;
+    }
+
+    .card-heading {
+        font-size: 1rem;
+    }
+
+    .card-description {
+        font-size: 10px;
+    }
+
+    .contact-heading {
+        font-size: 1rem;
+    }
 }
