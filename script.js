@@ -175,8 +175,10 @@ document.addEventListener("keydown", (e) => {
 
 // Swipe / drag
 let dragStartX = null;
+let dragStartY = null;
 let dragStartTransform = 0;
 let isDragging = false;
+let isHorizontalDrag = null;
 
 track.addEventListener("mousedown", dragStart);
 track.addEventListener("touchstart", dragStart, { passive: true });
@@ -190,13 +192,30 @@ window.addEventListener("touchend", dragEnd);
 function dragStart(e) {
   isDragging = true;
   dragStartX = e.touches ? e.touches[0].clientX : e.clientX;
+  dragStartY = e.touches ? e.touches[0].clientY : e.clientY;
   dragStartTransform = current * getCardWidth();
   track.style.transition = "none";
+  isHorizontalDrag = null; // direction not yet determined
 }
 
 function dragMove(e) {
   if (!isDragging) return;
   const x = e.touches ? e.touches[0].clientX : e.clientX;
+  const y = e.touches ? e.touches[0].clientY : e.clientY;
+  const dx = Math.abs(dragStartX - x);
+  const dy = Math.abs(dragStartY - y);
+
+  // On first move, lock direction — if more vertical than horizontal, bail out
+  if (isHorizontalDrag === null) {
+    if (dy > dx) {
+      isDragging = false;
+      track.style.transition = "";
+      goTo(current); // snap back cleanly
+      return;
+    }
+    isHorizontalDrag = true;
+  }
+
   const delta = dragStartX - x;
   const raw = dragStartTransform + delta;
   const min = 0;
