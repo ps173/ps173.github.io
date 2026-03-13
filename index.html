@@ -3,19 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Mehmeh's Personal Website" />
+        <meta name="description" content="Pratham Sharma - Developer" />
         <link rel="stylesheet" href="global.css" />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
             rel="stylesheet"
         />
-
-        <title>Mehmehsloth's Site</title>
+        <title>Pratham Sharma</title>
         <!-- OG Tags -->
-        <meta property="og:title" content="Mehmeh's website" />
+        <meta property="og:title" content="Pratham Sharma" />
         <meta property="og:description" content="Pratham's Personal Website" />
         <meta
             property="og:image"
@@ -24,33 +23,30 @@
     </head>
     <body>
         <div class="page">
-            <header>
-                <div class="header-title">Pratham Sharma</div>
-                <button class="menu-toggle no-print" id="menu-toggle">
-                    &#9776;
-                </button>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li>
-                            <a href="assets/resume.pdf">CV</a>
-                        </li>
-                        <li>
-                            <a
-                                class="random-button"
-                                href="https://ps173.github.io/personal-website/"
-                                >🎁 ?</a
-                            >
-                        </li>
-                        <li>
-                            <button id="theme-toggle" class="emoji-button">
-                                🌞
-                            </button>
-                        </li>
-                    </ul>
+            <!-- Hero -->
+            <section class="hero">
+                <h1 class="hero-name">Pratham Sharma</h1>
+                <nav class="hero-nav" id="nav">
+                    <a href="#about">about</a>
+                    <span class="nav-sep">/</span>
+                    <a href="#work">work</a>
+                    <span class="nav-sep">/</span>
+                    <a href="#contact">contact</a>
+                    <span class="nav-sep">/</span>
+                    <a href="assets/resume.pdf">cv</a>
+                    <span class="nav-sep">/</span>
+                    <a
+                        href="https://ps173.github.io/personal-website/"
+                        title="mystery link"
+                        >?</a
+                    >
+                    <span class="nav-sep">/</span>
+                    <button id="theme-toggle" class="theme-btn no-print">
+                        🌞
+                    </button>
                 </nav>
-            </header>
+            </section>
+
             <main>
                 <section id="about">
                     <p class="no-print">
@@ -65,249 +61,186 @@
                         Hence, I think I have decent practical working
                         experience. Currently working
                         <a href="https://codeword.tech">@codeword</a> where we
-                        make marketing automation applications
+                        make marketing automation applications.
                     </p>
                 </section>
-                <section class="projects">
-                    <div class="section-heading">Work</div>
-                    <div class="cardList">
-                        <div class="card">
-                            <img
-                                class="card-thumbnail no-print"
-                                src="./assets/macrostack-web.jpg"
-                                alt="Thumbnail"
-                            />
-                            <h2 class="card-heading">Macrostack</h2>
-                            <p class="card-description">
-                                My work at
-                                <a href="https://codeword.tech">@codeword</a>,
-                                generally revolves around this project only. I
-                                was the founding engineer on this project and
-                                have built all the services related from
-                                scratch. Macrostack is a marketing automation
-                                tool that helps to launch ad campaigns, creat
-                                audiences and manage customers across facebook,
-                                instagram, google, whatsapp and emails. It also
-                                provides insights related to various campaigns,
-                                audience and creatives.
-                            </p>
-                            <div class="card-footer">
-                                <a href="https://macrostack.co/">live</a>
-                            </div>
-                        </div>
 
-                        <div class="card">
-                            <img
-                                class="card-thumbnail no-print"
-                                src="./assets/vimgore-ui.png"
-                                alt="Thumbnail"
-                            />
-                            <h2 class="card-heading">Vimgore</h2>
-                            <p class="card-description">
-                                This is a interactive game to learn vim using
-                                snippets. Inspiration was taken from vim-golf
-                                and tried to make a browser version for it.
-                            </p>
-                            <div class="card-footer">
-                                <a href="https://github.com/ps173/vimgore"
-                                    >Code</a
-                                >
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img
-                                class="card-thumbnail no-print"
-                                src="./assets/ddos-d.png"
-                                alt="Thumbnail"
-                            />
-                            <h2 class="card-heading">DDOS-D</h2>
-                            <p class="card-description">
-                                A game about logic gate. I made many small games
-                                when I was learning development. This particular
-                                one is the most original. Not the best but most
-                                original. I made this particular one for an
-                                online code-jam called olc.
-                            </p>
-                            <div class="card-footer">
-                                <a href="https://github.com/ps173/ddos-d"
-                                    >code</a
-                                >
-                                <a href="https://ps173.itch.io/ddos-d"
-                                    >itch.io</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="projects">
-                    <div class="section-heading">Freelance Work</div>
-                    <div class="cardList">
-                        <div class="card">
-                            <img
-                                class="card-thumbnail no-print"
-                                src="./assets/pharming-web.png"
-                                alt="Thumbnail"
-                            />
-                            <h2 class="card-heading">
-                                Pharmint - B2B pharma marketplace
-                            </h2>
-                            <p class="card-description">
-                                I worked at pharmint as assistant devops
-                                engineer and fullstack engineer in span of 3
-                                month contract work. I worked in maintaining
-                                their ec2 servers especially spinning up
-                                development and staging servers. I also worked
-                                on admin panels used by internal teams to
-                                calculate cost comparison of various items and
-                                to get package tracking info.
-                            </p>
-                            <div class="card-footer">
-                                <a href="https://pharmint.net/">live</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img
-                                class="card-thumbnail no-print"
-                                src="./assets/crepdogcrew.png"
-                                alt="Thumbnail"
-                            />
-                            <h2 class="card-heading">Crepdog Crew</h2>
-                            <p class="card-description">
-                                I worked on building custom product cards,
-                                instant checkouts and a lot of bug fixing during
-                                sales period. It mostly involved working with
-                                liquid themes and shopify apps.
-                            </p>
-                            <div class="card-footer">
-                                <a href="https://crepdogcrew.com/">live</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="contact" class="contact-sections">
-                    <div class="section-heading">Socials</div>
-                    <div class="links-list">
-                        <div>
-                            <a href="mailto:prathamsharma173@gmail.com"
-                                >Email</a
+                <section id="work" class="projects">
+                    <div class="section-heading-row">
+                        <div class="section-heading">// projects</div>
+                        <div class="carousel-controls no-print">
+                            <button
+                                class="carousel-btn"
+                                id="carousel-prev"
+                                aria-label="Previous project"
                             >
+                                ←
+                            </button>
+                            <span class="carousel-counter"
+                                ><span id="carousel-current">1</span>/<span
+                                    id="carousel-total"
+                                    >5</span
+                                ></span
+                            >
+                            <button
+                                class="carousel-btn"
+                                id="carousel-next"
+                                aria-label="Next project"
+                            >
+                                →
+                            </button>
                         </div>
-                        <div><a href="https://github.com/ps173">Github</a></div>
-                        <div>
+                    </div>
+                    <div class="carousel-track-wrapper">
+                        <ul
+                            class="carousel-track"
+                            id="carousel-track"
+                            role="list"
+                        >
+                            <li class="card">
+                                <img
+                                    class="card-thumbnail no-print"
+                                    src="./assets/macrostack-web.jpg"
+                                    alt="Macrostack screenshot"
+                                />
+                                <div class="card-meta">
+                                    <h2 class="card-heading">Macrostack</h2>
+                                    <span class="card-tag">[work]</span>
+                                </div>
+                                <p class="card-description">
+                                    My work at
+                                    <a href="https://codeword.tech">@codeword</a
+                                    >. Founding engineer — built all services
+                                    from scratch. Marketing automation tool for
+                                    ad campaigns, audiences, and customer
+                                    management across facebook, instagram,
+                                    google, whatsapp and email.
+                                </p>
+                                <div class="card-footer">
+                                    <a href="https://macrostack.co/">live</a>
+                                </div>
+                            </li>
+
+                            <li class="card">
+                                <img
+                                    class="card-thumbnail no-print"
+                                    src="./assets/vimgore-ui.png"
+                                    alt="Vimgore screenshot"
+                                />
+                                <div class="card-meta">
+                                    <h2 class="card-heading">Vimgore</h2>
+                                    <span class="card-tag">[work]</span>
+                                </div>
+                                <p class="card-description">
+                                    An interactive game to learn vim using
+                                    snippets. Inspired by vim-golf, ported to
+                                    the browser.
+                                </p>
+                                <div class="card-footer">
+                                    <a href="https://github.com/ps173/vimgore"
+                                        >code</a
+                                    >
+                                </div>
+                            </li>
+
+                            <li class="card">
+                                <img
+                                    class="card-thumbnail no-print"
+                                    src="./assets/ddos-d.png"
+                                    alt="DDOS-D screenshot"
+                                />
+                                <div class="card-meta">
+                                    <h2 class="card-heading">DDOS-D</h2>
+                                    <span class="card-tag">[work]</span>
+                                </div>
+                                <p class="card-description">
+                                    A game about logic gates. Made for an online
+                                    code-jam called olc. Most original thing
+                                    I've built.
+                                </p>
+                                <div class="card-footer">
+                                    <a href="https://github.com/ps173/ddos-d"
+                                        >code</a
+                                    >
+                                    <a href="https://ps173.itch.io/ddos-d"
+                                        >itch.io</a
+                                    >
+                                </div>
+                            </li>
+
+                            <li class="card">
+                                <img
+                                    class="card-thumbnail no-print"
+                                    src="./assets/pharming-web.png"
+                                    alt="Pharmint screenshot"
+                                />
+                                <div class="card-meta">
+                                    <h2 class="card-heading">Pharmint</h2>
+                                    <span class="card-tag">[freelance]</span>
+                                </div>
+                                <p class="card-description">
+                                    Assistant devops and fullstack engineer on a
+                                    3-month contract. Maintained EC2 servers,
+                                    spun up dev and staging environments, built
+                                    admin panels for cost comparison and package
+                                    tracking.
+                                </p>
+                                <div class="card-footer">
+                                    <a href="https://pharmint.net/">live</a>
+                                </div>
+                            </li>
+
+                            <li class="card">
+                                <img
+                                    class="card-thumbnail no-print"
+                                    src="./assets/crepdogcrew.png"
+                                    alt="Crepdog Crew screenshot"
+                                />
+                                <div class="card-meta">
+                                    <h2 class="card-heading">Crepdog Crew</h2>
+                                    <span class="card-tag">[freelance]</span>
+                                </div>
+                                <p class="card-description">
+                                    Built custom product cards, instant
+                                    checkouts, and bug fixes during sales
+                                    periods. Worked with Liquid themes and
+                                    Shopify apps.
+                                </p>
+                                <div class="card-footer">
+                                    <a href="https://crepdogcrew.com/">live</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <div class="section-heading">// contact</div>
+                    <ul class="links-list">
+                        <li>
+                            <a href="mailto:prathamsharma173@gmail.com"
+                                >email</a
+                            >
+                        </li>
+                        <li><a href="https://github.com/ps173">github</a></li>
+                        <li>
                             <a
                                 href="https://www.linkedin.com/in/pratham-sharma-318231172/"
-                                >Linkedin</a
+                                >linkedin</a
                             >
-                        </div>
-                        <div>
-                            <a href="https://mehmehsloth.medium.com//"
-                                >Medium</a
-                            >
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <a href="https://mehmehsloth.medium.com/">medium</a>
+                        </li>
+                    </ul>
                 </section>
             </main>
-            <footer>
-                <p>&copy; 2024 prathamsharma173@gmail.com</p>
+
+            <footer class="no-print">
+                <span>prathamsharma173@gmail.com</span>
+                <span>© 2024</span>
             </footer>
-            <script src="script.js"></script>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="global.css" />
-    <meta name="description" content="Pratham's Personal Website" />
-    <title>Personal Site</title>
-    <meta property="og:title" content="Pratham's Website" />
-    <meta property="og:description" content="Pratham's Personal Website" />
-    <meta property="og:image"
-    content="https://cdn2.thecatapi.com/images/MTgzOTYzNQ.jpg"
-  </head>
-  <body>
-
-    <div id="Main">
-      <span slot="header"> Pratham Sharma</span>
-      <span slot="subtitle">A fullstack webdeveloper</span>
-    </div>
-
-    <div id="About"></div>
-
-    <div id="Projects">
-      <div class="projects-display" slot="project-list">
-        <ul>
-          <li>
-            Vimgore : <a href="https://vimgore.netlify.app/about">live</a> /
-            <a href="https://github.com/ps173/vimgore">code</a>
-          </li>
-          <span>
-            This is a interactive game to learn vim using snippets. This app was
-            built using MERN stack. I learned lot of things while making this
-            like making deploying a site, hosting backend api, and general stuff
-            about rest apis.
-          </span>
-
-          <li>
-            mkd-editor : <a href="https://ps173.github.io/mkd-editor">live</a> /
-            <a href="https://github.com/ps173/mkd-editor">code</a>
-          </li>
-          <span>
-            A Markdown editor in your browser. I made this as a self imposed
-            challenge. The challenge was to complete app in a single day. I did
-            complete the challenge. This app was built using typescript and
-            nextjs. I also used github actions to host this live on gh pages.
-          </span>
-
-          <li>
-            tnews bot : <a href="https://github.com/ps173/tnews-bot">code</a>
-          </li>
-          <span>
-            A telegram bot that displays and let's you search through news. Made
-            using python and news api.
-          </span>
-
-          <li>
-            dodowarrio : <a href="https://github.com/ps173/dodowarrio">code</a>
-          </li>
-          <span> A command line todo list made in go. </span>
-
-          <li>
-            Asteroids Clone :
-            <a href="https://github.com/ps173/asteroids">code</a>
-          </li>
-          <span> A asteroids clone made using lua and love2d framework. </span>
-
-          <li>
-            DDOS-D : <a href="https://github.com/ps173/asteroids">code</a>
-          </li>
-          <span>
-            A game about logic gates made using lua and love2d framework.
-          </span>
-        </ul>
-      </div>
-    </div>
-
-    <div id="Contact">
-      <div class="contact-info" slot="contact-info">
-        <ul>
-          <li><a href="mailto:prathamsharma173@gmail.com">mail</a></li>
-          <li><a href="http://t.me/Spirit_ps17">telegram</a></li>
-          <li><a href="http://instagram.com/unparalleled173">instagram</a></li>
-          <li><a href="http://twitter.com/mehmehsloth">twitter</a></li>
-        </ul>
-        <br />
-        I also try to write blogs on :
-        <ul>
-          <li><a href="https://dev.to/ps173">dev.to</a></li>
-          <li><a href="https://mehmehsloth.medium.com/">medium</a></li>
-        </ul>
-      </div>
-    </div>
-
-  </body>
-</html> -->
