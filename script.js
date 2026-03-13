@@ -268,11 +268,9 @@ window.addEventListener("resize", () => goTo(current));
     if (!res.ok) throw new Error("fetch failed");
     const text = await res.text();
     const xml = new DOMParser().parseFromString(text, "text/xml");
-    const items = Array.from(xml.querySelectorAll("item")).slice(0, 8);
+    const items = Array.from(xml.querySelectorAll("item")).slice(0, 6);
 
     if (!items.length) throw new Error("no items");
-
-    console.log(items);
 
     listEl.innerHTML = items
       .map((item) => {

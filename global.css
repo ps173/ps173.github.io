@@ -185,7 +185,7 @@ main > section {
 
 .about-text p {
     margin: 0 0 1rem 0;
-    max-width: 62ch;
+    max-width: 100%;
 }
 
 .about-text p:last-child {
@@ -313,6 +313,10 @@ main > section {
     gap: 0.5rem;
 }
 
+em {
+    color: var(--color-4);
+}
+
 .card-tag {
     font-size: 0.7rem;
     color: var(--muted);
@@ -341,6 +345,10 @@ main > section {
     font-weight: 700;
     margin: 0;
     letter-spacing: -0.01em;
+}
+
+.card-heading a {
+    color: var(--color-1);
 }
 
 .card-description {
@@ -376,6 +384,20 @@ main > section {
     margin: 0 0.4rem;
 }
 
+.card.notable-clients {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #66666630;
+    padding: 2rem;
+}
+
+.notable-clients-heading-text {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: var(--muted);
+}
+
 /* ── Links list ── */
 
 .links-list {
@@ -399,7 +421,7 @@ main > section {
 }
 
 .links-list a {
-    color: var(--text);
+    color: var(--color-4);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.15s ease;
@@ -487,10 +509,24 @@ a {
     gap: 2rem;
 }
 
+.misc-header-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.misc-header-block .section-heading {
+    margin-bottom: 0rem;
+}
+
+.misc-text {
+    font-size: 0.8rem;
+}
+
 .misc-block {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 2rem;
 }
 
 .misc-widget-label {
@@ -503,7 +539,7 @@ a {
 
 .github-chart {
     width: 100%;
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     display: block;
     filter: grayscale(20%);
     transition: filter 0.2s ease;
