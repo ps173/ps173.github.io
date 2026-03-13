@@ -252,3 +252,70 @@ function dragEnd(e) {
 
 // Recalculate on resize
 window.addEventListener("resize", () => goTo(current));
+
+// ── Letterboxd RSS ─────────────────────────────────────
+
+(async function () {
+  const listEl = document.getElementById("letterboxd-list");
+  if (!listEl) return;
+
+  try {
+    const res = await fetch("assets/letterboxdfeed.xml", {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+    if (!res.ok) throw new Error("fetch failed");
+    const text = await res.text();
+    const xml = new DOMParser().parseFromString(text, "text/xml");
+    const items = Array.from(xml.querySelectorAll("item")).slice(0, 8);
+
+    if (!items.length) throw new Error("no items");
+
+    console.log(items);
+
+    listEl.innerHTML = items
+      .map((item) => {
+        // Use textContent of all children to find <link> — it sits between tags
+        // so getElementsByTagName is safer than querySelector here
+        const linkEl = Array.from(item.childNodes).find(
+          (n) => n.nodeName === "link",
+        );
+        const link = linkEl ? linkEl.textContent.trim() : "#";
+
+        const title =
+          item.getElementsByTagName("title")[0]?.textContent?.trim() ?? "";
+        const cleanTitle = title.replace(/,\s*\d{4}.*$/, "");
+
+        const desc =
+          item.getElementsByTagName("description")[0]?.textContent ?? "";
+        const imgMatch = desc.match(/<img[^>]+src="([^"]+)"/);
+        const poster = imgMatch ? imgMatch[1] : null;
+
+        // memberRating — try both prefixed and unprefixed
+        const ratingEl =
+          item.getElementsByTagName("letterboxd:memberRating")[0] ??
+          item.getElementsByTagName("memberRating")[0];
+        const rating = ratingEl ? parseFloat(ratingEl.textContent) : null;
+        const fullStars = rating ? Math.floor(rating) : 0;
+        const halfStar = rating && rating % 1 >= 0.5 ? "½" : "";
+        const stars = rating ? "★".repeat(fullStars) + halfStar : "";
+
+        return `
+        <li>
+          <a class="lb-card" href="${link}" target="_blank" rel="noopener">
+            ${
+              poster
+                ? `<img src="${poster}" alt="${cleanTitle}" loading="lazy" />`
+                : `<div class="lb-card-img-placeholder"></div>`
+            }
+            <span class="lb-card-title">${cleanTitle}</span>
+            ${stars ? `<span class="lb-card-rating">${stars}</span>` : ""}
+          </a>
+        </li>`;
+      })
+      .join("");
+  } catch (err) {
+    listEl.innerHTML = `<li class="letterboxd-error">could not load films — <a href="https://letterboxd.com/mehmehsloth/" target="_blank">view on letterboxd</a></li>`;
+  }
+})();
