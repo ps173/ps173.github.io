@@ -1,0 +1,18 @@
+name: Update Letterbox Feed
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - run: update-feed.sh
+      - uses: gr2m/set-cron-schedule-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          cron: |
+            0 10 * * 2
+            0 15 * * 4
+          workflow: update-letterbox-rss.yml
+          message: "updates letterbox rss feed"
