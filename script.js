@@ -15,6 +15,10 @@
 
   let labelIndex = 0;
   let frameTimer = null;
+  let cyclesDone = 0;
+  // LABELS has 4 entries: index 0 is the starting state shown immediately,
+  // so one full cycle means visiting indices 1, 2, 3 (3 transitions).
+  const MAX_CYCLES = LABELS.length - 1;
 
   function randChar() {
     return CHARS[Math.floor(Math.random() * CHARS.length)];
@@ -44,7 +48,6 @@
 
     function frame() {
       if (charIndex >= targetLen) {
-        // All chars resolved — render final clean state
         el.innerHTML =
           target.split("").map(escapeChar).join("") +
           '<span class="cursor">_</span>';
@@ -70,13 +73,18 @@
   }
 
   function cycle() {
+    cyclesDone++;
     labelIndex = (labelIndex + 1) % LABELS.length;
     scrambleTo(LABELS[labelIndex], () => {
+      if (cyclesDone >= MAX_CYCLES) {
+        // Animation complete — remove the blinking cursor so it's fully static
+        el.innerHTML = LABELS[labelIndex].split("").map(escapeChar).join("");
+        return;
+      }
       frameTimer = setTimeout(cycle, HOLD_DURATION);
     });
   }
 
-  // Render the first label immediately, then begin cycling
   el.innerHTML =
     LABELS[0].split("").map(escapeChar).join("") +
     '<span class="cursor">_</span>';
@@ -123,9 +131,15 @@ let current = 0;
 
 totalEl.textContent = total;
 
+function isMobile() {
+  return window.innerWidth <= 600;
+}
+
 function getCardWidth() {
-  // card width + gap (1.5rem = 24px)
-  return cards[0].getBoundingClientRect().width + 24;
+  // On mobile, cards are 100% width with gap: 0, so no gap to add.
+  // On desktop, cards are 85% width with a 1.5rem (24px) gap between them.
+  const gap = isMobile() ? 0 : 24;
+  return cards[0].getBoundingClientRect().width + gap;
 }
 
 function goTo(index) {
