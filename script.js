@@ -1,3 +1,88 @@
+// ── Name Scramble ───────────────────────────────────────
+
+(function () {
+  const el = document.getElementById("hero-name");
+  if (!el) return;
+
+  const CHARS =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@._-";
+  const LABELS = ["Pratham Sharma", "@mehmehsloth", "@ps173", "Pratham Sharma"];
+
+  const SCRAMBLE_SPEED = 40; // ms per frame while a char is scrambling
+  const RESOLVE_DELAY = 55; // ms between each char locking in
+  const HOLD_DURATION = 2800; // ms to hold the resolved text before next cycle
+  const SCRAMBLE_ITERS = 8; // random frames before a char locks
+
+  let labelIndex = 0;
+  let frameTimer = null;
+
+  function randChar() {
+    return CHARS[Math.floor(Math.random() * CHARS.length)];
+  }
+
+  function escapeChar(c) {
+    if (c === "&") return "&amp;";
+    if (c === "<") return "&lt;";
+    if (c === ">") return "&gt;";
+    return c;
+  }
+
+  function render(resolved, scrambleCount) {
+    let html = resolved.split("").map(escapeChar).join("");
+    for (let i = 0; i < scrambleCount; i++) {
+      html += `<span class="scramble-char">${randChar()}</span>`;
+    }
+    html += `<span class="cursor">_</span>`;
+    el.innerHTML = html;
+  }
+
+  function scrambleTo(target, onDone) {
+    const targetLen = target.length;
+    let resolved = "";
+    let charIndex = 0;
+    let iterCount = 0;
+
+    function frame() {
+      if (charIndex >= targetLen) {
+        // All chars resolved — render final clean state
+        el.innerHTML =
+          target.split("").map(escapeChar).join("") +
+          '<span class="cursor">_</span>';
+        onDone();
+        return;
+      }
+
+      iterCount++;
+      const scrambleCount = Math.max(0, targetLen - resolved.length);
+      render(resolved, scrambleCount);
+
+      if (iterCount >= SCRAMBLE_ITERS) {
+        resolved += target[charIndex];
+        charIndex++;
+        iterCount = 0;
+        frameTimer = setTimeout(frame, RESOLVE_DELAY);
+      } else {
+        frameTimer = setTimeout(frame, SCRAMBLE_SPEED);
+      }
+    }
+
+    frame();
+  }
+
+  function cycle() {
+    labelIndex = (labelIndex + 1) % LABELS.length;
+    scrambleTo(LABELS[labelIndex], () => {
+      frameTimer = setTimeout(cycle, HOLD_DURATION);
+    });
+  }
+
+  // Render the first label immediately, then begin cycling
+  el.innerHTML =
+    LABELS[0].split("").map(escapeChar).join("") +
+    '<span class="cursor">_</span>';
+  frameTimer = setTimeout(cycle, HOLD_DURATION);
+})();
+
 // ── Theme ──────────────────────────────────────────────
 
 const body = document.body;
