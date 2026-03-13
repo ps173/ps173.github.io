@@ -8,9 +8,9 @@
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@._-";
   const LABELS = ["Pratham Sharma", "@mehmehsloth", "@ps173", "Pratham Sharma"];
 
-  const SCRAMBLE_SPEED = 40; // ms per frame while a char is scrambling
-  const RESOLVE_DELAY = 55; // ms between each char locking in
-  const HOLD_DURATION = 2800; // ms to hold the resolved text before next cycle
+  const SCRAMBLE_SPEED = 35; // ms per frame while a char is scrambling
+  const RESOLVE_DELAY = 25; // ms between each char locking in
+  const HOLD_DURATION = 2300; // ms to hold the resolved text before next cycle
   const SCRAMBLE_ITERS = 8; // random frames before a char locks
 
   let labelIndex = 0;
