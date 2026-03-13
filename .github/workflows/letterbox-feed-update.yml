@@ -1,7 +1,7 @@
-name: Update Letterbox Feed
+name: update-letterbox-rss
 on:
   schedule:
-    - cron: "0 0 * * 0"
+    - cron: "0 0 * * 6"
 
 jobs:
   reminder:
