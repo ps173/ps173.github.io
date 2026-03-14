@@ -10,10 +10,10 @@ on:
     - cron: "0 0 * * 6"
 
 jobs:
-  reminder:
+  update_script_run:
     runs-on: ubuntu-latest
     steps:
-      - run: bash ${GITHUB_WORKSPACE}/update-feed.sh
+      - run: bash update-feed.sh
       - uses: gr2m/set-cron-schedule-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
