@@ -1,5 +1,11 @@
 name: update-letterbox-rss
 on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for running'
+        required: false
+        default: 'Manual run'
   schedule:
     - cron: "0 0 * * 6"
 
@@ -7,7 +13,7 @@ jobs:
   reminder:
     runs-on: ubuntu-latest
     steps:
-      - run: update-feed.sh
+      - run: bash ${GITHUB_WORKSPACE}/update-feed.sh
       - uses: gr2m/set-cron-schedule-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
