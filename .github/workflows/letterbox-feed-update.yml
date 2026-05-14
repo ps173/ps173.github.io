@@ -7,19 +7,20 @@ on:
         required: false
         default: Manual run
   schedule:
-    - cron: 0 10 * * 2
-    - cron: 0 15 * * 4
+    - cron: 0 0 * * 6
+
 permissions:
   contents: write
+
 jobs:
   update_script_run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: bash update-feed.sh
-      - uses: gr2m/set-cron-schedule-action@v2
-        with:
-          token: ${{ secrets.PAT }}
-          cron: 0 0 * * 6
-          workflow: letterbox-feed-update.yml
-          message: updates letterbox rss feed
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add assets/letterboxdfeed.xml
+          git commit -m "update letterboxd rss feed" || true
+          git push
