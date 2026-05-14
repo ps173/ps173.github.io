@@ -20,8 +20,6 @@ jobs:
       - uses: gr2m/set-cron-schedule-action@v2
         with:
           token: ${{ secrets.PAT }}
-          cron: |
-            0 10 * * 2
-            0 15 * * 4
+          cron: 0 0 * * 6
           workflow: letterbox-feed-update.yml
           message: updates letterbox rss feed
