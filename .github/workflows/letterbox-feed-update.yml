@@ -9,6 +9,9 @@ on:
   schedule:
     - cron: "0 0 * * 6"
 
+permissions:
+  contents: write
+
 jobs:
   update_script_run:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
       - run: bash update-feed.sh
       - uses: gr2m/set-cron-schedule-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           cron: |
             0 10 * * 2
             0 15 * * 4
