@@ -3,15 +3,14 @@ on:
   workflow_dispatch:
     inputs:
       reason:
-        description: "Reason for running"
+        description: Reason for running
         required: false
-        default: "Manual run"
+        default: Manual run
   schedule:
-    - cron: "0 0 * * 6"
-
+    - cron: 0 10 * * 2
+    - cron: 0 15 * * 4
 permissions:
   contents: write
-
 jobs:
   update_script_run:
     runs-on: ubuntu-latest
@@ -25,4 +24,4 @@ jobs:
             0 10 * * 2
             0 15 * * 4
           workflow: letterbox-feed-update.yml
-          message: "updates letterbox rss feed"
+          message: updates letterbox rss feed
