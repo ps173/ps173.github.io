@@ -3,16 +3,17 @@ on:
   workflow_dispatch:
     inputs:
       reason:
-        description: 'Reason for running'
+        description: "Reason for running"
         required: false
-        default: 'Manual run'
+        default: "Manual run"
   schedule:
-    - cron: "0 0 * * 6"
+    - cron: "* * * * *"
 
 jobs:
   update_script_run:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: bash update-feed.sh
       - uses: gr2m/set-cron-schedule-action@v2
         with:
