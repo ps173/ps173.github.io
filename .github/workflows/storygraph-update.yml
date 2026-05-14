@@ -7,7 +7,7 @@ on:
         required: false
         default: Manual run
   schedule:
-    - cron: 0 0 * * 0
+    - cron: 0 0 1 * *
 
 permissions:
   contents: write
