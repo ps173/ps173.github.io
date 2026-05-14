@@ -1,0 +1,28 @@
+name: update-storygraph
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: Reason for running
+        required: false
+        default: Manual run
+  schedule:
+    - cron: 0 0 * * 0
+
+permissions:
+  contents: write
+
+jobs:
+  update_script_run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash update-storygraph.sh
+        env:
+          STORYGRAPH_COOKIE: ${{ secrets.STORYGRAPH_COOKIE }}
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add storygraph_to_read.json
+          git commit -m "chore (storygraph): update book lists" || true
+          git push

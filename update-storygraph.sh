@@ -1,0 +1,1 @@
+python3 update-storygraph.py > storygraph_to_read.json

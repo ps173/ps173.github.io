@@ -1,0 +1,132 @@
+{
+  "currently_reading": [
+    {
+      "id": "a3a825c2-0135-4c79-bb6d-2fb7f94ac2a5",
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garc\u00eda M\u00e1rquez with Gregory Rabassa (Translator)",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780061120091-M.jpg?default=false",
+      "pages": "417",
+      "year": "1967",
+      "format": "Paperback",
+      "rating": "",
+      "tags": [
+        "fiction",
+        "classics",
+        "history"
+      ]
+    },
+    {
+      "id": "5c0989bb-e324-476f-b7ba-46a74bc1cb7a",
+      "title": "Meditations",
+      "author": "Marcus Aurelius with Martin Hammond (Translator)",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140449334-M.jpg?default=false",
+      "pages": "254",
+      "year": "",
+      "format": "Paperback",
+      "rating": "",
+      "tags": [
+        "philosophy",
+        "classics",
+        "nonfiction",
+        "history"
+      ]
+    }
+  ],
+  "recently_read": [
+    {
+      "id": "1c8879fe-1017-41dd-830f-69eb33ca34b6",
+      "title": "Intermezzo",
+      "author": "Sally Rooney",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780571365463-M.jpg?default=false",
+      "pages": "442",
+      "year": "2024",
+      "format": "Hardcover",
+      "rating": "3.0",
+      "tags": [
+        "fiction",
+        "history"
+      ]
+    },
+    {
+      "id": "951be66c-5bf0-44eb-845c-8963294da473",
+      "title": "Mr Salary",
+      "author": "Sally Rooney",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780571351954-M.jpg?default=false",
+      "pages": "33",
+      "year": "2016",
+      "format": "Paperback",
+      "rating": "3.0",
+      "tags": [
+        "fiction",
+        "short stories",
+        "history"
+      ]
+    },
+    {
+      "id": "c408a517-07e7-435f-8e7f-b81cbb2e9318",
+      "title": "The God of Small Things",
+      "author": "Arundhati Roy",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780679457312-M.jpg?default=false",
+      "pages": "321",
+      "year": "1997",
+      "format": "Hardcover",
+      "rating": "4.5",
+      "tags": [
+        "fiction",
+        "classics",
+        "history"
+      ]
+    }
+  ],
+  "want_to_read": [
+    {
+      "id": "d4c50f68-8baf-4cd1-b436-51c095777765",
+      "title": "Everything is Tuberculosis",
+      "author": "John Green",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780525556572-M.jpg?default=false",
+      "pages": "198",
+      "year": "2025",
+      "format": "Hardcover",
+      "rating": "",
+      "tags": [
+        "nonfiction",
+        "health",
+        "science",
+        "history"
+      ]
+    },
+    {
+      "id": "edafc638-fbe6-4a52-a99a-25efd90ebaa2",
+      "title": "The Letters of Vincent Van Gogh",
+      "author": "Vincent van Gogh with Arnold J. Pomerans (Translator)",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140446746-M.jpg?default=false",
+      "pages": "560",
+      "year": "1914",
+      "format": "Paperback",
+      "rating": "",
+      "tags": [
+        "history",
+        "nonfiction",
+        "classics",
+        "art",
+        "biography"
+      ]
+    },
+    {
+      "id": "3c940ac6-a1d9-45f3-a96d-50695639e7e1",
+      "title": "The Book of Human Emotions: An Encyclopaedia of Feeling from Anger to Wanderlust",
+      "author": "Tiffany Watt Smith",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781781251300-M.jpg?default=false",
+      "pages": "320",
+      "year": "2015",
+      "format": "Paperback",
+      "rating": "",
+      "tags": [
+        "psychology",
+        "self help",
+        "nonfiction",
+        "history"
+      ]
+    }
+  ]
+}

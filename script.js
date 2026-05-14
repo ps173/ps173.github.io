@@ -255,7 +255,7 @@ window.addEventListener("resize", () => goTo(current));
 
 // ── Letterboxd RSS ─────────────────────────────────────
 
-(async function () {
+async function renderLetterboxdList() {
   const listEl = document.getElementById("letterboxd-list");
   if (!listEl) return;
 
@@ -316,4 +316,54 @@ window.addEventListener("resize", () => goTo(current));
   } catch (err) {
     listEl.innerHTML = `<li class="letterboxd-error">could not load films — <a href="https://letterboxd.com/mehmehsloth/" target="_blank">view on letterboxd</a></li>`;
   }
-})();
+}
+
+// ── StoryGraph ─────────────────────────────────────────
+
+const SG_LISTS = [
+  { key: "currently_reading", label: "reading", cls: "is-reading" },
+  { key: "recently_read",     label: "recently read", cls: "is-recent" },
+  { key: "want_to_read",      label: "want to read", cls: "is-want" },
+];
+
+async function renderStorygraph() {
+  const stripEl = document.getElementById("sg-strip");
+  if (!stripEl) return;
+
+  try {
+    const res = await fetch("storygraph_to_read.json");
+    if (!res.ok) throw new Error("fetch failed");
+    const data = await res.json();
+    let html = "";
+
+    for (const section of SG_LISTS) {
+      const books = data[section.key];
+      if (!books || !books.length) continue;
+
+      html += books
+        .map((b) => {
+          const rating = b.rating ? ` ★${b.rating}` : "";
+          const cover = b.cover
+            ? `<img src="${b.cover}" alt="${b.title}" loading="lazy" onerror="this.outerHTML='<div class=sg-card-placeholder></div>'" />`
+            : `<div class="sg-card-placeholder"></div>`;
+          return `
+        <li>
+          <a class="sg-card" href="https://app.thestorygraph.com/books/${b.id}" target="_blank" rel="noopener">
+            <span class="sg-status ${section.cls}">${section.label}</span>
+            ${cover}
+            <span class="sg-card-title">${b.title}</span>
+            <span class="sg-card-tags">${rating}</span>
+          </a>
+        </li>`;
+        })
+        .join("");
+    }
+
+    stripEl.innerHTML = html || `<li class="storygraph-error">no books</li>`;
+  } catch (err) {
+    stripEl.innerHTML = `<li class="storygraph-error">could not load books</li>`;
+  }
+}
+
+renderStorygraph();
+renderLetterboxdList();
