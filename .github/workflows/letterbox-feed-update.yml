@@ -7,7 +7,7 @@ on:
         required: false
         default: "Manual run"
   schedule:
-    - cron: "* * * * *"
+    - cron: "0 0 * * 6"
 
 jobs:
   update_script_run:
