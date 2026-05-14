@@ -22,5 +22,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add assets/letterboxdfeed.xml
-          git commit -m "update letterboxd rss feed" || true
+          git commit -m "chore (letterboxd): update letterboxd rss feed" || true
           git push
