@@ -10,9 +10,9 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "history",
+        "fiction",
         "classics",
-        "fiction"
+        "history"
       ]
     },
     {
@@ -26,9 +26,9 @@
       "rating": "",
       "tags": [
         "philosophy",
-        "history",
         "classics",
-        "nonfiction"
+        "nonfiction",
+        "history"
       ]
     }
   ],
@@ -43,8 +43,8 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
-        "fiction"
+        "fiction",
+        "history"
       ]
     },
     {
@@ -57,9 +57,9 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "short stories",
+        "fiction",
         "history",
-        "fiction"
+        "short stories"
       ]
     },
     {
@@ -72,9 +72,9 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
+        "fiction",
         "classics",
-        "fiction"
+        "history"
       ]
     }
   ],
@@ -89,10 +89,10 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
         "science",
+        "nonfiction",
         "health",
-        "nonfiction"
+        "history"
       ]
     },
     {
@@ -105,11 +105,11 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "history",
-        "classics",
-        "art",
         "biography",
-        "nonfiction"
+        "art",
+        "nonfiction",
+        "history",
+        "classics"
       ]
     },
     {
@@ -122,10 +122,10 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "self help",
         "psychology",
-        "history",
-        "nonfiction"
+        "nonfiction",
+        "self help",
+        "history"
       ]
     }
   ]
