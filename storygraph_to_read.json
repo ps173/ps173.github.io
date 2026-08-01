@@ -1,24 +1,23 @@
 {
   "currently_reading": [
     {
-      "id": "a3a825c2-0135-4c79-bb6d-2fb7f94ac2a5",
-      "title": "One Hundred Years of Solitude",
-      "author": "Gabriel Garc\u00eda M\u00e1rquez with Gregory Rabassa (Translator)",
-      "cover": "https://covers.openlibrary.org/b/isbn/9780061120091-M.jpg?default=false",
-      "pages": "417",
-      "year": "1967",
-      "format": "Paperback",
+      "id": "f2705943-fe29-4d97-ba35-04615fb9e3ac",
+      "title": "All the Lovers in the Night",
+      "author": "Mieko Kawakami with David Boyd (Translator), Sam Bett (Translator)",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781609456993-M.jpg?default=false",
+      "pages": "221",
+      "year": "2011",
+      "format": "Hardcover",
       "rating": "",
       "tags": [
         "history",
-        "fiction",
-        "classics"
+        "fiction"
       ]
     },
     {
       "id": "5c0989bb-e324-476f-b7ba-46a74bc1cb7a",
       "title": "Meditations",
-      "author": "Marcus Aurelius with Martin Hammond (Translator)",
+      "author": "Marcus Aurelius with Martin Hammond (Translator), Gregory Hays (Translator), Ryan Holiday (Contributor)",
       "cover": "https://covers.openlibrary.org/b/isbn/9780140449334-M.jpg?default=false",
       "pages": "254",
       "year": "",
@@ -26,9 +25,9 @@
       "rating": "",
       "tags": [
         "history",
+        "philosophy",
         "nonfiction",
-        "classics",
-        "philosophy"
+        "classics"
       ]
     }
   ],
@@ -36,7 +35,7 @@
     {
       "id": "1c8879fe-1017-41dd-830f-69eb33ca34b6",
       "title": "Intermezzo",
-      "author": "Sally Rooney",
+      "author": "Sally Rooney with Zo\u00eb Beck (Translator)",
       "cover": "https://covers.openlibrary.org/b/isbn/9780571365463-M.jpg?default=false",
       "pages": "442",
       "year": "2024",
@@ -80,6 +79,22 @@
   ],
   "want_to_read": [
     {
+      "id": "e076391b-0215-46a0-826d-318918fef86e",
+      "title": "Foundation",
+      "author": "#1 Foundation Isaac Asimov",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780553803716-M.jpg?default=false",
+      "pages": "244",
+      "year": "1951",
+      "format": "Hardcover",
+      "rating": "",
+      "tags": [
+        "history",
+        "fiction",
+        "science",
+        "classics"
+      ]
+    },
+    {
       "id": "d4c50f68-8baf-4cd1-b436-51c095777765",
       "title": "Everything is Tuberculosis",
       "author": "John Green",
@@ -90,8 +105,8 @@
       "rating": "",
       "tags": [
         "history",
-        "nonfiction",
         "health",
+        "nonfiction",
         "science"
       ]
     },
@@ -106,26 +121,10 @@
       "rating": "",
       "tags": [
         "history",
-        "art",
-        "nonfiction",
         "classics",
-        "biography"
-      ]
-    },
-    {
-      "id": "3c940ac6-a1d9-45f3-a96d-50695639e7e1",
-      "title": "The Book of Human Emotions: An Encyclopaedia of Feeling from Anger to Wanderlust",
-      "author": "Tiffany Watt Smith",
-      "cover": "https://covers.openlibrary.org/b/isbn/9781781251300-M.jpg?default=false",
-      "pages": "320",
-      "year": "2015",
-      "format": "Paperback",
-      "rating": "",
-      "tags": [
-        "history",
-        "nonfiction",
-        "self help",
-        "psychology"
+        "art",
+        "biography",
+        "nonfiction"
       ]
     }
   ]
