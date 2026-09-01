@@ -10,8 +10,8 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
-        "fiction"
+        "fiction",
+        "history"
       ]
     },
     {
@@ -25,8 +25,8 @@
       "rating": "",
       "tags": [
         "history",
-        "philosophy",
         "nonfiction",
+        "philosophy",
         "classics"
       ]
     }
@@ -42,8 +42,8 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
-        "fiction"
+        "fiction",
+        "history"
       ]
     },
     {
@@ -56,8 +56,8 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "history",
         "fiction",
+        "history",
         "short stories"
       ]
     },
@@ -71,60 +71,58 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
         "fiction",
+        "history",
         "classics"
       ]
     }
   ],
   "want_to_read": [
     {
-      "id": "e076391b-0215-46a0-826d-318918fef86e",
-      "title": "Foundation",
-      "author": "#1 Foundation Isaac Asimov",
-      "cover": "https://covers.openlibrary.org/b/isbn/9780553803716-M.jpg?default=false",
-      "pages": "244",
-      "year": "1951",
-      "format": "Hardcover",
+      "id": "db1b0081-0e01-4e0a-968b-70bf8d32653d",
+      "title": "Selected Poems",
+      "author": "John Keats with John Barnard",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140424478-M.jpg?default=false",
+      "pages": "277",
+      "year": "1947",
+      "format": "Paperback",
       "rating": "",
       "tags": [
-        "history",
         "fiction",
-        "science",
+        "history",
+        "poetry",
         "classics"
       ]
     },
     {
-      "id": "d4c50f68-8baf-4cd1-b436-51c095777765",
-      "title": "Everything is Tuberculosis",
-      "author": "John Green",
-      "cover": "https://covers.openlibrary.org/b/isbn/9780525556572-M.jpg?default=false",
-      "pages": "198",
-      "year": "2025",
-      "format": "Hardcover",
-      "rating": "",
-      "tags": [
-        "history",
-        "health",
-        "nonfiction",
-        "science"
-      ]
-    },
-    {
-      "id": "edafc638-fbe6-4a52-a99a-25efd90ebaa2",
-      "title": "The Letters of Vincent Van Gogh",
-      "author": "Vincent van Gogh with Arnold J. Pomerans (Translator)",
-      "cover": "https://covers.openlibrary.org/b/isbn/9780140446746-M.jpg?default=false",
-      "pages": "560",
-      "year": "1914",
+      "id": "bfeb3a3b-cc08-4844-9a3d-3d18e10adc2f",
+      "title": "The Complete Persepolis",
+      "author": "Marjane Satrapi with Mattias Ripa (Translator), Blake Ferris (Translator)",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780375714832-M.jpg?default=false",
+      "pages": "341",
+      "year": "2000",
       "format": "Paperback",
       "rating": "",
       "tags": [
         "history",
-        "classics",
-        "art",
-        "biography",
-        "nonfiction"
+        "nonfiction",
+        "memoir"
+      ]
+    },
+    {
+      "id": "c1048c19-a1b9-4946-bc1f-ad7d7de0ef63",
+      "title": "Maybe You Should Talk to Someone",
+      "author": "#1 Maybe You Should Talk to Someone Lori Gottlieb",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781328662057-M.jpg?default=false",
+      "pages": "415",
+      "year": "2019",
+      "format": "Hardcover",
+      "rating": "",
+      "tags": [
+        "psychology",
+        "memoir",
+        "nonfiction",
+        "history"
       ]
     }
   ]
