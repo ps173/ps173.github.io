@@ -10,8 +10,8 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "fiction",
-        "history"
+        "history",
+        "fiction"
       ]
     },
     {
@@ -25,8 +25,8 @@
       "rating": "",
       "tags": [
         "history",
-        "nonfiction",
         "philosophy",
+        "nonfiction",
         "classics"
       ]
     }
@@ -42,8 +42,8 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "fiction",
-        "history"
+        "history",
+        "fiction"
       ]
     },
     {
@@ -56,9 +56,9 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "fiction",
+        "short stories",
         "history",
-        "short stories"
+        "fiction"
       ]
     },
     {
@@ -71,9 +71,9 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "fiction",
         "history",
-        "classics"
+        "classics",
+        "fiction"
       ]
     }
   ],
@@ -88,10 +88,10 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "fiction",
         "history",
-        "poetry",
-        "classics"
+        "classics",
+        "fiction",
+        "poetry"
       ]
     },
     {
@@ -119,10 +119,10 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
+        "history",
         "psychology",
-        "memoir",
         "nonfiction",
-        "history"
+        "memoir"
       ]
     }
   ]
