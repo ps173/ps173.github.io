@@ -1,6 +1,21 @@
 {
   "currently_reading": [
     {
+      "id": "c518ed1e-b807-4d65-9d63-b935bf84d30f",
+      "title": "Anxious People",
+      "author": "Fredrik Backman with Neil Smith (Translator)",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781982169633-M.jpg?default=false",
+      "pages": "341",
+      "year": "2019",
+      "format": "Hardcover",
+      "rating": "",
+      "tags": [
+        "mystery",
+        "history",
+        "fiction"
+      ]
+    },
+    {
       "id": "f2705943-fe29-4d97-ba35-04615fb9e3ac",
       "title": "All the Lovers in the Night",
       "author": "Mieko Kawakami with David Boyd (Translator), Sam Bett (Translator)",
@@ -24,10 +39,10 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "history",
+        "classics",
         "philosophy",
-        "nonfiction",
-        "classics"
+        "history",
+        "nonfiction"
       ]
     }
   ],
@@ -71,8 +86,8 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
         "classics",
+        "history",
         "fiction"
       ]
     }
@@ -88,10 +103,10 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
-        "history",
         "classics",
-        "fiction",
-        "poetry"
+        "poetry",
+        "history",
+        "fiction"
       ]
     },
     {
@@ -104,9 +119,9 @@
       "format": "Paperback",
       "rating": "",
       "tags": [
+        "memoir",
         "history",
-        "nonfiction",
-        "memoir"
+        "nonfiction"
       ]
     },
     {
@@ -119,10 +134,10 @@
       "format": "Hardcover",
       "rating": "",
       "tags": [
-        "history",
         "psychology",
-        "nonfiction",
-        "memoir"
+        "memoir",
+        "history",
+        "nonfiction"
       ]
     }
   ]
